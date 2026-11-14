@@ -1,6 +1,51 @@
-# VideoRep
-One thing that I tried to do while studying rust, it only watch videos
+# 🎬 VideoRep
+
+A simple command-line video player built in Rust as a hands-on learning project.
+
+## 📖 Overview
+
+**VideoRep** is an experimental media launcher created while studying Rust. It allows you to list and play pre-configured local or web-hosted videos directly from the terminal.
+
+## ⚙️ Requirements
+
+* **Rust & Cargo:** Make sure you have the Rust toolchain installed.
+* **Operating System:** Recommended on **Linux** (including **WSL** on Windows).
+
+## 🚀 How to Use
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com
+   cd VideoRep
+   ```
+
+2. **Configure your video paths:**
+   Before running the project, update the hardcoded file directories in the source code to match the paths on your machine.
+
+3. **Run the application:**
+   ```bash
+   cargo run
+   ```
+
+4. **List available videos:**
+   When prompted in the terminal, type `list` to view all configured videos. The project comes pre-configured with 4 sample entries used for testing.
+
+## ➕ Adding Your Own Videos
+
+To add new videos to the player, update the `match` block in the source code following these steps:
+
+1. Add your video's trigger name to the `match` statement.
+2. Set its availability flag to `true`.
+3. Assign the path to `*WaY_nya` ending with `.to_string()`.
+
+### Path Formatting Rules
+* **Local files:** Must start with `file:///` (e.g., `file:///home/user/videos/my%20video.mp4`).
+* **Web URLs:** Must start with `https://` (e.g., `https://example.com`).
+* **No spaces allowed:** Replace any spaces (` `) in your path or filename with `%20`.
+
+## 📄 License
+
+This project is open-source and available for educational and personal use.
+
 ---
-if u wanna try it a little, first u should change the directorys acording to ur pc directorys, I recomend using linux, even if is a WSL
-to see which videos does it have just type "list", it'll go with 4 videos that I used to test on my pc but u can download ur own, just write the name on match, put a true and write the directory to *WaY_nya using .to_string() on the end
-the dir must be on this way: "https:///" if it's on web or "file:///" if it's on ur pc, it can't hace spaces, instead of writing ' ' write '%20'
+Developed by [Zanon-dev2](https://github.com/Zanon-dev2).
